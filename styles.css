@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    position: relative; /* Ensure container's position context */
+}
+nav {
+    width: 200px;
+    background-color: #333;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    display: block; /* Default display for larger screens */
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin-bottom: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #575757;
+}
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 50px;
+}
+.section img {
+    width: 920px;  /* Default width for larger screens */
+    height: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #f4f4f4; /* Light background for header */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd; /* Slightly darker for headers */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color for better readability */
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0; /* Highlight row on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 150px;
+    }
+    .content {
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        display: none; /* Hide the sidebar by default on mobile */
+        width: 100%; /* Full width for the button */
+    }
+    .content {
+        margin-left: 0; /* Remove left margin to use full screen width */
+    }
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure button is on top */
+    }
+    nav.show {
+        display: block; /* Show sidebar when 'show' class is added */
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+    table, th, td {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px;
+    }
+
+    /* Shrinking images for mobile devices */
+    .section img {
+        width: 100%;   /* Make image responsive to screen width */
+        max-width: 400px; /* Max width for images on mobile (adjust as needed) */
+    }
+
+    /* Responsive adjustments for Swiss Topo */
+    .topo-image {
+        width: 100%;
+        max-width: 920px; /* Adjust based on your needs */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Responsive adjustments for Swiss Topo */
+    @media screen and (max-width: 480px) {
+        .topo-image {
+            max-width: 400px; /* Adjust based on mobile needs */
+        }
+    }
+}
